@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container,
+section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 16px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.submenu {
+    display: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    max-width: 300px;
+    top: 100%;
+}
+
+.menu>li {
+    float: left;
+    list-style: none;
+    margin: 0 15px;
+    position: relative;
+}
+
+.clear {
+    clear: both;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    display: block;
+    padding: 8px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+section .container {
+    align-items: flex-start;
+}
+
+section {
+    padding: 24px 0;
+}
+
+section h2 {
+    margin-bottom: 24px;
+}
+
+section p {
+    margin-bottom: 8px;
+}
+
+.frente-loja {
+    max-width: 400px;
+    margin-right: 32px;
+    border-radius: 15px;
+}
+
+section h3 {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+section h3 {
+    font-size: 25px;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24.18%);
+    column-gap: 2%;
+    row-gap: 3%;
+}
+
+.produto a img {
+    max-width: 226px;
+}
+
+.produtos article strong,
+article h4,
+.produto a {
+    text-decoration: none;
+    font-size: 25px;
+}
+
+article h4 {
+    color: black;
+}
+
+article strong {
+    color: #03C203;
+}
+
+article button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+}
+
+
+
+footer {
+    display: block; /* Garante que o footer se comporte como um bloco */
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Adicione uma cor de fundo para o footer */
+    border-top: 1px solid #ccc; /* Adicione uma borda superior para separar o footer */
+    margin-top: 20px; /* Espaçamento entre a seção de produtos e o footer */
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 731px) {
+    .container {
+        text-align: center;
+        max-width: 90%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    
+
+    header .container,
+    section .container {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .frente-loja {
+        max-width: 90%;
+        margin-right: 0;
+        border-radius: 15px;
+    }
+
+    .submenu {
+        display: block;
+        border: none;
+        position: relative;
+        width: 100%;
+    }
+    
+    .menu{
+        display: none;
+    }
+
+    .menu>li {
+        text-align: left;
+        clear: both;
+        list-style: none;
+        margin: 0 15px;
+        position: relative;
+    }
+    
+    
+    .submenu li {
+        display: block;
+        padding: 8px;
+    }
+
+    .btn-menu button {
+        margin-top: 16px;
+        padding: 8px;
+    }
+
+    .produtos {
+        display: block;
+    }
+
+    .produto {
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (min-width:731px) and (max-width:1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+    .produtos {
+        grid-template-columns: repeat(3, 32.33%);
+    }
+
+    footer {
+        margin-top: 50px; /* Espaçamento entre a seção de produtos e o footer */
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .btn-menu{
+        display: none;
+    }
+    
+}
